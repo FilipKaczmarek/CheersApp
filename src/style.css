@@ -25,6 +25,7 @@ html {
   height: auto;
   top: 150px;
   right: -60px;
+  z-index: 0;
 }
 
 .navigation--bar {
@@ -58,5 +59,18 @@ html {
 
 .navigation--bar ul .navbar--title {
   padding-left: 20px;
+}
+
+.aboutUs--section {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-right: 150px;
+  line-height: 1.8rem;
+  z-index: 10;
+  color: #0D1821;
+}
+
+.aboutUs--section .aboutUs--header {
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

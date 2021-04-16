@@ -32,6 +32,7 @@ html {
         height: auto;
         top: 150px;
         right: -60px;
+        z-index: 0;
     }
 }
 
@@ -61,5 +62,17 @@ html {
         .navbar--title{
             padding-left: 20px;
         }
+    }
+}
+
+.aboutUs--section{
+    max-width: $maxWidth;
+    margin: $marginAuto;    
+    padding-right: 150px;
+    line-height: 1.8rem;
+    z-index: 10;
+    color: $thirdColor;
+    .aboutUs--header{
+        margin-top: 2rem;
     }
 }
