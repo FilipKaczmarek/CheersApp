@@ -73,4 +73,37 @@ html {
 .aboutUs--section .aboutUs--header {
   margin-top: 2rem;
 }
+
+.app--container {
+  max-width: 1024px;
+  margin: 3rem auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px 25px 0px 0px;
+}
+
+.app--container .app--container__searchbar {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app--container .app--container__searchbar label {
+  padding: 25px 25px;
+}
+
+.app--container .app--container__searchbar label select {
+  padding: 0 10px;
+}
 /*# sourceMappingURL=style.css.map */

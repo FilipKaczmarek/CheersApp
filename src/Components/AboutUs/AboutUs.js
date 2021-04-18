@@ -12,15 +12,11 @@ sectionHeader.innerHTML = header;
 
 const sectionContent = document.createElement('p');
 sectionContent.className = "aboutUs--content";
-sectionContent.innerHTML = content
+sectionContent.innerHTML = content;
 
 
 container.appendChild(sectionHeader);
-container.appendChild(sectionContent)
-const aboutUsSection = aboutUsFragment.appendChild(container)
-// const aboutUsContent = `<div class="aboutUs--section"><h1 class="a">${header}/h1>
-// <p>${content}</p></div>`
-
-// const aboutUsSection = aboutUsFragment.appendChild(aboutUsContent);
+container.appendChild(sectionContent);
+const aboutUsSection = aboutUsFragment.appendChild(container);
 
 export default aboutUsSection

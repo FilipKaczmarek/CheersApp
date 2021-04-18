@@ -1,6 +1,9 @@
 import './style.css'
 import currentList from './Components/Navigation/NavBar'
 import aboutUsSection from './Components/AboutUs/AboutUs'
+import app from './Components/MainContent/App'
+
+import {getData} from './API/api'
 
 const rootBox = document.getElementById('root');
 
@@ -20,3 +23,7 @@ rootBox.appendChild(navBox);
 
 // Creating AboutUs Section
 rootBox.appendChild(aboutUsSection)
+
+// Box with Beers
+rootBox.appendChild(app())
+

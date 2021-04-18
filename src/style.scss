@@ -7,6 +7,13 @@ $font: 'Lato', sans-serif; // font-family: 'Lato', sans-serif;
 $maxWidth: 1024px;
 $marginAuto: 0 auto;
 
+@mixin displayFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -74,5 +81,26 @@ html {
     color: $thirdColor;
     .aboutUs--header{
         margin-top: 2rem;
+    }
+}
+
+.app--container{
+    max-width: $maxWidth;
+    margin: 3rem auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px 25px 0px 0px;
+
+    .app--container__searchbar{
+        width: 100%;
+        height: auto;
+        @include displayFlex(row, flex-end, center);
+
+        label{
+            padding: 25px 25px;
+
+            select{
+                padding: 0 10px;
+            }
+        }
     }
 }
