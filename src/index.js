@@ -4,7 +4,7 @@ import aboutUsSection from './Components/AboutUs/AboutUs'
 import app from './Components/MainContent/App'
 import api from './API/api'
 
-api( (data) => { return data });
+api()
 
 const rootBox = document.getElementById('root');
 
@@ -23,9 +23,7 @@ navBox.appendChild(currentList);
 rootBox.appendChild(navBox);
 
 // Creating AboutUs Section
-rootBox.appendChild(aboutUsSection)
+rootBox.appendChild(aboutUsSection);
 
 // Box with Beers
-rootBox.appendChild(app(data))
-
-fetch('https://api.punkapi.com/v2/beers').then(respo => respo.json()).then(data => console.log(data))
+rootBox.appendChild(app(api());

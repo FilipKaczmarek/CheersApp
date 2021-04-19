@@ -1,10 +1,17 @@
 import createCard from './Card'
-import api from '../../API/api'
 
-api( (data) => { return data });
+const cards = ( api_data ) => {
 
-const cards () => {
+    const cardsBox = document.createElement('div');
+    cardsBox.className = 'app--container__cardBox';
 
 
+    for (let beerObject of api_data){
+
+        createCard(cardsBox, beerObject)
+
+    }
 
 }
+
+export default cards

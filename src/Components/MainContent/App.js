@@ -1,4 +1,6 @@
 import { IBU_SELECT, ABV_SELECT } from './SelectApp'
+import cards from './Cards'
+import api from '../../API/api'
 
 function app( api_data ) {
     const mainBox = document.createElement('div');
@@ -14,11 +16,8 @@ function app( api_data ) {
     searchBar.appendChild(ABV_SELECT);
     mainBox.appendChild(searchBar);
 
-    // Cards box
-    const cardsBox = document.createElement('div');
-    cardsBox.className = 'app--container__cardBox';
-
-    // Create card
+    // Create cards
+    mainBox.appendChild(cards(api_data));
 
     return mainBox
 }
