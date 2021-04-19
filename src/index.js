@@ -2,8 +2,9 @@ import './style.css'
 import currentList from './Components/Navigation/NavBar'
 import aboutUsSection from './Components/AboutUs/AboutUs'
 import app from './Components/MainContent/App'
+import api from './API/api'
 
-import {getData} from './API/api'
+api( (data) => { return data });
 
 const rootBox = document.getElementById('root');
 
@@ -25,5 +26,6 @@ rootBox.appendChild(navBox);
 rootBox.appendChild(aboutUsSection)
 
 // Box with Beers
-rootBox.appendChild(app())
+rootBox.appendChild(app(data))
 
+fetch('https://api.punkapi.com/v2/beers').then(respo => respo.json()).then(data => console.log(data))
