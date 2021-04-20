@@ -1,12 +1,4 @@
-const appendArrayOfChild = (parent, listOfChild) => {
-   
-    for(let child of listOfChild){
-        parent.appendChild(child)
-    }
-    
-}
-
-const createCard = (parent, cardDetailsObject) => {
+const createCard = (cardDetailsObject) => {
     
     const { 
         name, 
@@ -36,7 +28,11 @@ const createCard = (parent, cardDetailsObject) => {
     const descriptionContent = document.createElement('p');
     descriptionContent.innerHTML = `${description}`;
 
-    appendArrayOfChild(cardBox, [imageBox, title, spanInfoABV, spanInfoIBU, descriptionContent])
+    cardBox.appendChild(imageBox);
+    cardBox.appendChild(title);
+    cardBox.appendChild(spanInfoABV);
+    cardBox.appendChild(spanInfoIBU);
+    cardBox.appendChild(descriptionContent);
 
     return cardBox
 }

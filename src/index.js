@@ -4,7 +4,7 @@ import aboutUsSection from './Components/AboutUs/AboutUs'
 import app from './Components/MainContent/App'
 import api from './API/api'
 
-api()
+const apiData = api()
 
 const rootBox = document.getElementById('root');
 
@@ -26,4 +26,6 @@ rootBox.appendChild(navBox);
 rootBox.appendChild(aboutUsSection);
 
 // Box with Beers
-rootBox.appendChild(app(api());
+const application = app()
+console.log(application)
+rootBox.appendChild(application) 
