@@ -17,22 +17,27 @@ const createCard = (cardDetailsObject) => {
     image.src = `${image_url}`;
     imageBox.appendChild(image);
 
+    const informationBox = document.createElement('div');
+    informationBox.className = 'cardBox--details'
+
     const title = document.createElement('h3');
     title.innerHTML = `${name}`;
 
     const spanInfoABV = document.createElement('span');
     const spanInfoIBU = document.createElement('span');
-    spanInfoABV.innerHTML = `${abv}`;
-    spanInfoIBU.innerHTML = `${ibu}`;
+    spanInfoABV.innerHTML = `ABV: ${abv}`;
+    spanInfoIBU.innerHTML = `IBU: ${ibu}`;
 
     const descriptionContent = document.createElement('p');
     descriptionContent.innerHTML = `${description}`;
 
     cardBox.appendChild(imageBox);
-    cardBox.appendChild(title);
-    cardBox.appendChild(spanInfoABV);
-    cardBox.appendChild(spanInfoIBU);
-    cardBox.appendChild(descriptionContent);
+    informationBox.appendChild(title);
+    informationBox.appendChild(title);
+    informationBox.appendChild(spanInfoABV);
+    informationBox.appendChild(spanInfoIBU);
+    informationBox.appendChild(descriptionContent);
+    cardBox.appendChild(informationBox)
 
     return cardBox
 }
