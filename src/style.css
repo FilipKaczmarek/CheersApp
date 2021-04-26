@@ -21,10 +21,11 @@ html {
 
 #root .background--image {
   position: absolute;
-  width: 300px;
+  width: 240px;
   height: auto;
   top: 150px;
-  right: -60px;
+  right: 0px;
+  overflow-x: hidden;
   z-index: 0;
 }
 
@@ -80,7 +81,7 @@ html {
 .aboutUs--section {
   max-width: 1024px;
   margin: 0 auto;
-  padding-right: 150px;
+  padding-right: 25%;
   line-height: 1.8rem;
   color: #0D1821;
 }
@@ -89,16 +90,19 @@ html {
   margin-top: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .aboutUs--section {
+    margin: 2rem 0rem 0rem 0rem;
+    width: 70%;
+    padding-right: 0px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .aboutUs--section {
-    margin-top: 4rem;
-    width: 100%;
+    margin: 4rem 0rem 0rem 0rem;
+    width: 80%;
     padding-right: 0px;
-    position: relative;
-    z-index: 10;
-  }
-  .aboutUs--section .aboutUs--header {
-    margin-bottom: 3rem;
   }
 }
 
