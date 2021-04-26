@@ -2,6 +2,9 @@ $primatyColor: #FFC93C;
 $secondColor: #FFFF;
 $thirdColor: #0D1821;
 
+$mediaTablet: 768px;
+$mediaPhone: 425px;
+
 $font: 'Lato', sans-serif; // font-family: 'Lato', sans-serif;
 
 $maxWidth: 1024px;
@@ -40,6 +43,18 @@ html {
         top: 150px;
         right: -60px;
         z-index: 0;
+
+        @media screen and (max-width: $mediaTablet) {
+            width: 200px;
+            top: 130px;
+            right: 0px;
+        }
+
+        @media screen and (max-width: $mediaPhone) {
+            width: 150px;
+            top: 100px;
+            right: 0px;
+        }
     }
 }
 
@@ -51,9 +66,7 @@ html {
     top: 0;
     padding: 25px 0px;
 
-    // border-bottom: 1px #c5b897 solid;
     box-shadow: 0px 8px 10px -9px #c5b897 ;
-
     
     ul {
         width: 100%;
@@ -77,10 +90,21 @@ html {
     margin: $marginAuto;    
     padding-right: 150px;
     line-height: 1.8rem;
-    z-index: 10;
     color: $thirdColor;
     .aboutUs--header{
         margin-top: 2rem;
+    }
+
+    @media screen and (max-width: $mediaPhone) {
+        margin-top: 4rem;
+        width: 100%;
+        padding-right: 0px;
+        position: relative;
+        z-index: 10;
+
+        .aboutUs--header{
+            margin-bottom: 3rem;
+        }
     }
 }
 
@@ -119,6 +143,11 @@ html {
             flex-basis: 40%;
             margin: 1.25rem 1rem 1.25rem 1rem;
 
+            @media screen and (max-width: $mediaPhone){
+                max-width: 60%;
+                flex-basis: 60%;
+            }
+
             .cardBox--imageBox{
                 width: 50%;
                 @include displayFlex(row, center, center);
@@ -143,7 +172,7 @@ html {
                 }
 
                 p {
-                    height: auto;
+                    height: 100px;
                     overflow: hidden;
                 }
             }

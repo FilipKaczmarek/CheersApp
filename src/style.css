@@ -28,6 +28,22 @@ html {
   z-index: 0;
 }
 
+@media screen and (max-width: 768px) {
+  #root .background--image {
+    width: 200px;
+    top: 130px;
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #root .background--image {
+    width: 150px;
+    top: 100px;
+    right: 0px;
+  }
+}
+
 .navigation--bar {
   max-width: 1024px;
   height: auto;
@@ -66,12 +82,24 @@ html {
   margin: 0 auto;
   padding-right: 150px;
   line-height: 1.8rem;
-  z-index: 10;
   color: #0D1821;
 }
 
 .aboutUs--section .aboutUs--header {
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 425px) {
+  .aboutUs--section {
+    margin-top: 4rem;
+    width: 100%;
+    padding-right: 0px;
+    position: relative;
+    z-index: 10;
+  }
+  .aboutUs--section .aboutUs--header {
+    margin-bottom: 3rem;
+  }
 }
 
 .app--container {
@@ -116,9 +144,9 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -126,6 +154,7 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  padding: 2rem 0rem;
 }
 
 .app--container .app--container__cardBox .cardBox--card {
@@ -146,7 +175,15 @@ html {
   max-width: 40%;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
-  margin: 0 1rem 2.5rem 1rem;
+  margin: 1.25rem 1rem 1.25rem 1rem;
+}
+
+@media screen and (max-width: 425px) {
+  .app--container .app--container__cardBox .cardBox--card {
+    max-width: 60%;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
 }
 
 .app--container .app--container__cardBox .cardBox--card .cardBox--imageBox {
@@ -186,7 +223,7 @@ html {
 }
 
 .app--container .app--container__cardBox .cardBox--card .cardBox--details p {
-  height: 140px;
+  height: 100px;
   overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
